@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 
-    <context id="otter-persist" targetRuntime="MyBatis3">
+    <context id="cirworld-persist" targetRuntime="MyBatis3">
 
         <plugin type="org.mybatis.generator.plugins.AddLimitOffsetPlugin"/>
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
@@ -24,7 +24,7 @@
         <!--</jdbcConnection>-->
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://115.28.81.164:3306/otter?useUnicode=true&amp;characterEncoding=UTF-8"
+                        connectionURL="jdbc:mysql://115.28.81.164:3306/cirworld?useUnicode=true&amp;characterEncoding=UTF-8"
                         userId="wjc133" password="123wjc">
         </jdbcConnection>
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -43,7 +43,7 @@
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
         <!-- gem sq1 map -->
         <sqlMapGenerator targetPackage="."
-                         targetProject="./src/main/resources/mappers/otter">
+                         targetProject="./src/main/resources/mappers/cirworld">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -99,8 +99,21 @@
         <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
         <!--</table>-->
         <!--<table tableName="node_control_record"/>-->
-        <table tableName="luck_box">
+        <table tableName="cycling_part">
             <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="cycling_month">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="cycling_year">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="cycling_total"/>
+        <table tableName="cycling_plan">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="user">
+            <generatedKey column="uid" sqlStatement="JDBC"/>
         </table>
         <!--<table tableName="node"/>-->
         <!--<table tableName="prize" />-->
