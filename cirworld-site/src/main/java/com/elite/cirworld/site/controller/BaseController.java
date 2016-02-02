@@ -1,4 +1,4 @@
-package com.elite.cirworld.site;
+package com.elite.cirworld.site.controller;
 
 /**
  * Created by wjc133

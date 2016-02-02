@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <context id="otter-persist" targetRuntime="MyBatis3">
+
+        <plugin type="org.mybatis.generator.plugins.AddLimitOffsetPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <!-- remove comments -->
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!--jdbc connection-->
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+        <!--connectionURL="jdbc:mysql://116.31.122.23:3306/program?useUnicode=true&amp;characterEncoding=UTF-8"-->
+        <!--userId="tvbar" password="duowan">-->
+        <!--</jdbcConnection>-->
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://115.28.81.164:3306/otter?useUnicode=true&amp;characterEncoding=UTF-8"
+                        userId="wjc133" password="123wjc">
+        </jdbcConnection>
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- java type resolver -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- gem entity -->
+        <javaModelGenerator targetPackage="com.elite.cirworld.persist.model"
+                            targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- gem sq1 map -->
+        <sqlMapGenerator targetPackage="."
+                         targetProject="./src/main/resources/mappers/otter">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- gem  mapper -->
+        <javaClientGenerator type="XMLMAPPER"
+
+                             targetPackage="com.elite.cirworld.persist.mapper"
+                             targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--<table tableName="activity_condition"  domainObjectName="ActivityCondition">-->
+        <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="activity_condition"  domainObjectName="ActivityCondition">-->
+        <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="award_record"  domainObjectName="AwardRecord">-->
+        <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="control"  domainObjectName="Control">-->
+        <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="control_record"  domainObjectName="ControlRecord">-->
+        <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="prize" domainObjectName="Prize">-->
+        <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="prize_condition"  domainObjectName="PrizeCondition">-->
+        <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="prize_info"  domainObjectName="PrizeInfo">-->
+        <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="infor_area" >-->
+        <!--<table tableName="activity" />-->
+        <!--<table tableName="activity_condition" />-->
+        <!--<table tableName="award_record">-->
+        <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table tableName="control" />-->
+        <!--<table tableName="control_record" />-->
+        <!--<table tableName="lottery_log">-->
+        <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table tableName="node_control_record"/>-->
+        <table tableName="luck_box">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <!--<table tableName="node"/>-->
+        <!--<table tableName="prize" />-->
+        <!--<table tableName="prize_condition" />-->
+        <!--<table tableName="prize_info" />-->
+    </context>
+</generatorConfiguration>

@@ -15,6 +15,8 @@
         <module>cirworld-share</module>
         <module>cirworld-site</module>
         <module>cirworld-web</module>
+        <module>cirworld-oauth2</module>
+        <module>cirworld-persist</module>
     </modules>
 
     <properties>

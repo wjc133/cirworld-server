@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.elite.cirworld</groupId>
         <artifactId>cirworld-server</artifactId>
+        <groupId>com.elite.cirworld</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cirworld-web</artifactId>
+    <artifactId>cirworld-oauth2</artifactId>
     <packaging>war</packaging>
 
     <dependencies>
@@ -137,7 +137,7 @@
     </dependencies>
 
     <build>
-        <finalName>cirworld-web</finalName>
+        <finalName>cirworld-oauth2</finalName>
         <plugins>
             <!-- jetty-->
             <plugin>
@@ -157,7 +157,7 @@
                     <useTestClasspath>true</useTestClasspath>
 
                     <httpConnector>
-                        <port>8083</port>
+                        <port>8084</port>
                         <idleTimeout>60000</idleTimeout>
                     </httpConnector>
                 </configuration>

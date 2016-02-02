@@ -6,4 +6,5 @@ package com.elite.cirworld.admin.controller;
  * Time: 1:20
  */
 public class BaseController {
+
 }
